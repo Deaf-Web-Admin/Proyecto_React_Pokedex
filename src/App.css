@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
+  font-family: Calibri;
+  font-size: 24px;
+}
+.TitleSection {
+  background-color: #6ea4bb;
+  width: 100%;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e7e7e6;
+}
+.TitleSection input {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #5e98b1;
+  font-size: 18px;
+  padding-left: 10px;
+  text-align: center;
+}
+.TitleSection button {
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  padding-left: 10px;
+  border: none;
+  color: #e7e7e6;
+  background-color: #006cbf;
+}
+.TitleSection button:hover {
+  cursor: pointer;
+}
+.TitleSection img {
+  width: 50vw;
+}
+.Container{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.DisplaySection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 550px;
+  border: 5px solid white;
+  border-radius: 10px;
+  background: rgb(2,0,36);
+  background: linear-gradient(123deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+  margin: 30px;
+}
+.DisplaySection>H1{
+  font-size: 50pt;
+ text-align: center;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  color: black;
+}
+.flip-card-front> img{
+height: 250px;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.flip-card-back> img{
+height: 250px;
+}
+@media only screen and (max-width: 375px) 
+{
+  .Container{
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px;
+    padding: 5px;
+  }
+.TitleSection{
+  height: 260px;
+}
+  .TitleSection img {
+  width: 100vw;
+}
+}
